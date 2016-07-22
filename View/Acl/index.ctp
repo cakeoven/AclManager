@@ -7,10 +7,10 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Manage permissions'), array('action' => 'permissions')); ?></li>
-		<li><?php echo $this->Html->link(__('Update ACOs'), array('action' => 'update_acos')); ?></li>
-		<li><?php echo $this->Html->link(__('Update AROs'), array('action' => 'update_aros')); ?></li>
-		<li><?php echo $this->Html->link(__('Drop ACOs/AROs'), array('action' => 'drop'), array(), __("Do you want to drop all ACOs and AROs?")); ?></li>
-		<li><?php echo $this->Html->link(__('Drop permissions'), array('action' => 'drop_perms'), array(), __("Do you want to drop all the permissions?")); ?></li>
+		<li><?php echo $this->Html->link(__('Manage permissions'), ['action' => 'permissions']); ?></li>
+		<li><?php echo $this->Html->link(__('Update ACOs'), ['action' => 'update_acos']); ?></li>
+		<li><?php echo $this->Html->link(__('Update AROs'), ['action' => 'update_aros']); ?></li>
+		<li><?php echo $this->Html->link(__('Drop ACOs/AROs'), ['action' => 'drop'], [], __("Do you want to drop all ACOs and AROs?")); ?></li>
+		<li><?php echo $this->Html->link(__('Drop permissions'), ['action' => 'drop_perms'], [], __("Do you want to drop all the permissions?")); ?></li>
 	</ul>
 </div>

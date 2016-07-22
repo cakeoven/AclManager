@@ -1,9 +1,7 @@
 <?php
 /**
  * Acl Manager
- *
  * A CakePHP Plugin to manage Acl
- *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
@@ -17,7 +15,7 @@
  * List of AROs (Class aliases)
  * Order is important! Parent to Children
  */
-Configure::write('AclManager.aros', array('Role', 'User'));
+Configure::write('AclManager.aros', ['Role', 'User']);
 
 /**
  * Limit used to paginate AROs
@@ -29,21 +27,22 @@ Configure::write('AclManager.aros', array('Role', 'User'));
 /**
  * Routing Prefix
  * Set the prefix you would like to restrict the plugin to
+ *
  * @see Configure::read('Routing.prefixes')
  */
 // Configure::write('AclManager.prefix', 'admin');
 
 /**
- * Ugly identation?
+ * Ugly indentation?
  * Turn off when using CSS
  */
-Configure::write('AclManager.uglyIdent', true);
-				
+Configure::write('AclManager.uglyIndent', true);
+
 /**
  * Actions to ignore when looking for new ACOs
  * Format: 'action', 'Controller/action' or 'Plugin.Controller/action'
  */
-Configure::write('AclManager.ignoreActions', array('isAuthorized'));
+Configure::write('AclManager.ignoreActions', ['isAuthorized']);
 
 /**
  * List of ARO models to load
@@ -57,10 +56,10 @@ Configure::write('AclManager.ignoreActions', array('isAuthorized'));
 
 Configure::write("AclManager.version", "1.2.5");
 if (!is_array(Configure::read('AclManager.aros'))) {
-	Configure::write('AclManager.aros', array(Configure::read('AclManager.aros')));
+	Configure::write('AclManager.aros', [Configure::read('AclManager.aros')]);
 }
 if (!is_array(Configure::read('AclManager.ignoreActions'))) {
-	Configure::write('AclManager.ignoreActions', array(Configure::read('AclManager.ignoreActions')));
+	Configure::write('AclManager.ignoreActions', [Configure::read('AclManager.ignoreActions')]);
 }
 if (!Configure::read('AclManager.models')) {
 	Configure::write('AclManager.models', Configure::read('AclManager.aros'));

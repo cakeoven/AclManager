@@ -1,11 +1,24 @@
 {
-    "name": "fmcorz/acl-manager",
-    "type": "cakephp-plugin",
-    "description": "AclManager for CakePHP 2.x",
-    "homepage": "http://github.com/FMCorz/AclManager",
-    "license": "MIT",
-    "require": {
-        "php": ">=5.2.8",
-        "composer/installers": "*"
-    }
+	"name": "fmcorz/acl-manager",
+	"type": "cakephp-plugin",
+	"description": "AclManager for CakePHP 2.x",
+	"homepage": "http://github.com/FMCorz/AclManager",
+	"license": "MIT",
+	"require": {
+		"php": ">=5.2.8",
+		"composer/installers": "*",
+		"cakephp/cakephp": "~2.7",
+		"cakeoven/cakebootstrap": "2.*"
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "~2.4",
+		"phpunit/phpunit": "*"
+	},
+	"prefer-stable": true,
+	"config": {
+		"vendor-dir": "Vendor/"
+	},
+	"extra": {
+		"installer-name": "AclManager"
+	}
 }
